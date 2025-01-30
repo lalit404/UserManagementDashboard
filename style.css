@@ -1,0 +1,155 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.table-container {
+    overflow-x: auto; /* Enables horizontal scrolling */
+    max-width: 100%;
+    border: 1px solid #ccc; /* Add border around the scrollable area */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* Ensures columns stay readable */
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #ddd; /* Ensure table borders */
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Scrollbar Styling */
+.table-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#addUserBtn {
+    background-color: #007bff;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Form Styling */
+#userFormContainer {
+    display: none; /* Initially hidden */
+    width: 100%;
+    max-width: 400px; /* Keeps form compact */
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+}
+
+/* Input Fields */
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Stack buttons in a column */
+    td button {
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    /* Reduce font size for small screens */
+    th, td {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
+/* Make the table container scrollable */
+.table-container {
+    overflow-x: auto; /* Enables horizontal scrolling */
+    max-width: 100%;
+    border: 1px solid #ccc; /* Add border around the scrollable area */
+    position: relative; /* Ensures scrollbar positioning */
+    padding-bottom: 20px; /* Extra space for scrollbar */
+}
+
+/* Fixed scrollbar at the bottom of the screen */
+.table-scrollbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15px; /* Visible scrollbar size */
+    background: #f1f1f1;
+    overflow-x: auto;
+    z-index: 1000; /* Keeps scrollbar above everything */
+}
+
+/* Inner scrollbar to sync with the table */
+.table-scrollbar-inner {
+    width: 200%; /* Ensures it covers the whole table */
+    height: 15px;
+}
+
+/* Scrollbar Styling */
+.table-scrollbar::-webkit-scrollbar {
+    height: 10px; /* Visible scrollbar */
+}
+
+.table-scrollbar::-webkit-scrollbar-track {
+    background: #ddd; /* Light gray track */
+}
+
+.table-scrollbar::-webkit-scrollbar-thumb {
+    background: #888; /* Dark gray scrollbar */
+    border-radius: 4px;
+}
+
+.table-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker gray on hover */
+}

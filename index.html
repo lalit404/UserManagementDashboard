@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User Management Dashboard</h1>
+        
+        <!-- Button to add new user -->
+        <button id="addUserBtn">Add User</button>
+
+        <!-- Table to display users -->
+        <div class="table-container">
+            
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Department</th> 
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+                <!-- Users will be dynamically added here -->
+            </tbody>
+        </table>
+       
+        </div>
+        
+        <!-- User Form (Initially Hidden) -->
+
+<div id="userFormContainer" class="hidden">
+    <h2 id="formTitle">Add User</h2>
+    <form id="userForm">
+        <label for="userId">User ID:</label>
+        <input type="number" id="userId" required disabled>
+
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="department">Department:</label>
+        <select id="department" required>
+            <option value="">Select Department</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Marketing">Marketing</option>
+            <option value="HR">HR</option>
+            <option value="Sales">Sales</option>
+        </select>
+
+        <button type="submit">Save</button>
+        <button type="button" id="cancelBtn">Cancel</button>
+    </form>
+</div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
