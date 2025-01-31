@@ -9,7 +9,7 @@ const cancelBtn = document.getElementById("cancelBtn");
 const userTableBody = document.getElementById("userTableBody");
 
 // Predefined list of departments (since the API does not provide it)
-const departments = ["Engineering", "Marketing", "HR", "Sales"];
+const departments = ["Engineering", "Marketing", "HR", "Sales","Finance"];
 
 // Fetch users from API and display them in the table
 async function fetchUsers() {
